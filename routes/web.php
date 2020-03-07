@@ -1,7 +1,5 @@
 <?php
 
-use Illuminate\Support\Facades\Route;
-
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -14,5 +12,13 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+	return view('welcome');
 });
+
+Route::get('/utama', 'UtamaController@index')->name('home');
+Route::get('/karyawan', 'UtamaController@create')->name('karyawan');
+Route::get('/tambah', 'UtamaController@input')->name('input');
+Route::post('/karyawan', 'UtamaController@store');
+Route::get('/karyawan/edit/{id}', 'UtamaController@edit');
+Route::put('/karyawan/{id}', 'UtamaController@update');
+Route::delete('/karyawan/{id}', 'UtamaController@destroy');
