@@ -8,7 +8,7 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 
-    <title>Hello, world!</title>
+    <title>Halaman Utama</title>
   </head>
   <body>
 
@@ -17,22 +17,20 @@
         <div class="col-sm-12">
           <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark">
             <a class="navbar-brand" href="#">PT Cipta Karya</a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-conttrols>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupporttedContent" aria-controls="">
               <span class="navbar-toggler-icon"></span>
             </button>
-
-              <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav mr-auto">
-                  <li class="nav-item active">
-                    <a class="nav-link" href="#">Home</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="#">Data Karyawan</a>
-                  </li>
-                </ul>
-              </div>
-            </nav>
-          </div>
+            <div class="collapse navbar-collapse" id="navbarSupporttedContent">
+              <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                  <a class="nav-link" href="#">Home</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Data Karyawan</a>
+                </li>
+              </ul>
+            </div>
+          </nav>
         </div>
       </div>
       <div class="row">
@@ -48,10 +46,10 @@
                 <img src="{{ url('img/Fernandes.jpg') }}" class="img-fluid" alt="Responsive image">
               </div>
               <div class="carousel-item">
-                <img src="{{ url('img/Greenwood.jpg') }}" class="img-fluid" alt="Responsive image">
+                <img src="{{ url('img/Rashford.jpg') }}" class="img-fluid" alt="Responsive image">
               </div>
               <div class="carousel-item">
-                <img src="{{ url('img/Rashford.jpg') }}" class="img-fluid" alt="Responsive image">
+                <img src="{{ url('img/Greenwood.jpg') }}" class="img-fluid" alt="Responsive image">
               </div>
             </div>
             <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
@@ -65,20 +63,23 @@
           </div>
         </div>
       </div>
-    </div>
 
 
 
-    @yield('content')
 
-    <div class="row">
-      <div class="col-sm-12">
-        <div class="card-footer text-muted">
-          Copyright ASH 2020
+
+      @yield('content')
+
+      <div class="row">
+        <div class="col-sm-12">
+          <div class="card text-center">
+            <div class="card-footer text-muted">
+              Copyright ASH 2020
+            </div>
+          </div>
         </div>
       </div>
     </div>
-  </div>
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->

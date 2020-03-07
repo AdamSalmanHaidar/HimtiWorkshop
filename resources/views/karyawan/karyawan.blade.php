@@ -26,9 +26,9 @@
 						<td>{{ $tampil->nama }}</td>
 						<td>{{ $tampil->alamat }}</td>
 						<td>{{ $tampil->jabatan }}</td>
-						<td><a href="/Karyawan/edit{{ $tampil->id }}" class="btn btn-primary">Edit></a></td>
+						<td><a href="/karyawan/edit{{$tampil->id}}" class="btn btn-primary">Edit></a></td>
 						<td>
-							<form action="/Karyawan/{{$tampil->id}}" method="post">
+							<form action="/karyawan/{{$tampil->id}}" method="post">
 								{{csrf_field()}}
 								{{method_field('DELETE')}}
 								<button type="submit" value="hapus" class="btn btn-danger">Hapus</button>
