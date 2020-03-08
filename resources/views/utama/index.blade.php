@@ -7,6 +7,7 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
     <title>Halaman Utama</title>
   </head>
@@ -17,22 +18,23 @@
         <div class="col-sm-12">
           <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark">
             <a class="navbar-brand" href="#">PT Cipta Karya</a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupporttedContent" aria-controls="">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupporttedContent" aria-controls>
               <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarSupporttedContent">
               <ul class="navbar-nav mr-auto">
                 <li class="nav-item active">
-                  <a class="nav-link" href="#">Home</a>
+                  <a class="nav-link" href="{{ url('/') }}">Home</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="#">Data Karyawan</a>
+                  <a class="nav-link" href="{{ url('/karyawan') }}">Data Karyawan</a>
                 </li>
               </ul>
             </div>
           </nav>
         </div>
       </div>
+
       <div class="row">
         <div class="col-sm-12">
           <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
@@ -43,13 +45,13 @@
             </ol>
             <div class="carousel-inner">
               <div class="carousel-item active">
-                <img src="{{ url('img/Fernandes.jpg') }}" class="img-fluid" alt="Responsive image">
+                <img src="{{ url('img/Fernandes.jpg') }}" class="d-block w-100" alt="...">
               </div>
               <div class="carousel-item">
-                <img src="{{ url('img/Rashford.jpg') }}" class="img-fluid" alt="Responsive image">
+                <img src="{{ url('img/Greenwood.jpg') }}" class="d-block w-100" alt="...">
               </div>
               <div class="carousel-item">
-                <img src="{{ url('img/Greenwood.jpg') }}" class="img-fluid" alt="Responsive image">
+                <img src="{{ url('img/Rashford.jpg') }}" class="d-block w-100" alt="...">
               </div>
             </div>
             <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
@@ -63,9 +65,6 @@
           </div>
         </div>
       </div>
-
-
-
 
 
       @yield('content')

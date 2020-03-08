@@ -6,8 +6,34 @@
 <br>
 	<div class="row">
 		<div class="col-sm-12">
+			@if (session('error'))
+			<div>
+				
+
+				<h4>Danger!</h4>
+				{{ session('error') }}
+
+
+			</div>
+			@endif
+			@if (session('status_berhasil'))
+			<div>
+				
+				<h4>Succes!</h4>
+				{{ session('status_berhasil') }}
+
+			</div>
+			@endif
+			@if (session('status_gagal'))
+			<div>
+				
+				<h4>Alert!</h4>
+				{{ session('status_gagal') }}
+
+			</div>
+			@endif
+		<br>
 			<a href="/tambah" class="btn btn-primary">Tambah Data Karyawan</a>
-			<br><br>
 			<table class="table">
 				<thead class="thead-dark">
 					<tr>
@@ -26,7 +52,7 @@
 						<td>{{ $tampil->nama }}</td>
 						<td>{{ $tampil->alamat }}</td>
 						<td>{{ $tampil->jabatan }}</td>
-						<td><a href="/karyawan/edit{{$tampil->id}}" class="btn btn-primary">Edit></a></td>
+						<td><a href="/karyawan/edit/{{$tampil->id}}" class="btn btn-primary">Edit</a></td>
 						<td>
 							<form action="/karyawan/{{$tampil->id}}" method="post">
 								{{csrf_field()}}

@@ -40,7 +40,7 @@ class UtamaController extends Controller
 	public function edit($id){
 		$karyawan = Karyawan::find($id);
 
-		return view('update.update_karyawan', compact(karyawan));
+		return view('update.update_karyawan', compact('karyawan'));
 	}
 
 	public function update(Request $request, $id) {
@@ -50,8 +50,8 @@ class UtamaController extends Controller
 		$karyawan->jabatan = $request->jabatan;
 		$karyawan->save();
 		return redirect('karyawan');
-	}
 
+	}
 	public function destroy($id){
 		$data = Karyawan::find($id);
 		$data->delete();
